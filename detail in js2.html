@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple JavaScript Basics</title>
+</head>
+<body>
+
+<h2>JavaScript Basics</h2>
+
+<button onclick="showTypes()">Data Types</button>
+<p id="types"></p>
+
+<button onclick="convert()">Type Conversion</button>
+<p id="convert"></p>
+
+<button onclick="replace()">Replace Text</button>
+<p id="replace"></p>
+
+<button onclick="showError()">Try & Catch</button>
+<p id="error"></p>
+
+<script>
+function showTypes() {
+  let name = "Riya";
+  let age = 12;
+  let student = true;
+
+  document.getElementById("types").innerHTML =
+    typeof name + "<br>" +
+    typeof age + "<br>" +
+    typeof student;
+}
+
+function convert() {
+  let text = "88";
+  let number = Number(text);
+
+  document.getElementById("convert").innerHTML =
+    number + " - " + typeof number;
+}
+
+function replace() {
+  let text = "I like maths.";
+  document.getElementById("replace").innerHTML =
+    text.replace("maths", "coding");
+}
+
+function showError() {
+  try {
+    let result = total + 10;
+  } catch (e) {
+    document.getElementById("error").innerHTML = e.message;
+  }
+}
+</script>
+
+</body>
+</html>
